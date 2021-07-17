@@ -7,15 +7,10 @@ using UnityEngine;
 namespace Modular.Events {
 
     public class PayoutDivider : MonoBehaviour {
-        public GameEvent startRound;
         public ListVariableFloat payouts;                               //Universal List with the outputted payout array
         public float denomination;                                      //Total amount the player is betting
         private float[] payoutArray = new float[9];                     //Array containing all the payout values
         private int multiplier;                                         //The amount the bet is being multiplied by
-
-        private void Start() {
-            startRound.Raise();
-        }
 
         // This method generates a new random payout array
         public void GeneratePayoutArray() {
