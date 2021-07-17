@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundOver: {fileID: 11400000, guid: b59a6640b42e2c14297ad05e701df9a9, type: 2}
+  flipped: {fileID: 11400000, guid: 2be24f295c371d74daf31797b216f743, type: 2}
   roundActive: {fileID: 11400000, guid: 55be585a333ae524e885b093df7a3086, type: 2}
   payouts: {fileID: 11400000, guid: 009a688369fccd941a0f927fce3add83, type: 2}
   winTotal: {fileID: 11400000, guid: 9f3e226f3c6b57e4e8f7f1a52b0ea9fa, type: 2}

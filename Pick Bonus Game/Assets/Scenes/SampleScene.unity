@@ -771,6 +771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: {fileID: 11400000, guid: 1260c37e8925fb540ad44e470c80e7f6, type: 2}
+  resetValue: 0
 --- !u!1001 &889438047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1233,6 +1234,7 @@ GameObject:
   - component: {fileID: 1696746180}
   - component: {fileID: 1696746183}
   - component: {fileID: 1696746182}
+  - component: {fileID: 1696746184}
   m_Layer: 5
   m_Name: Last Win Total
   m_TagString: Untagged
@@ -1314,6 +1316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: {fileID: 11400000, guid: 9f3e226f3c6b57e4e8f7f1a52b0ea9fa, type: 2}
+  resetValue: 0
 --- !u!114 &1696746183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,7 +1329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0effd7304d85694b8374a425e3d6fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: b59a6640b42e2c14297ad05e701df9a9, type: 2}
+  Event: {fileID: 11400000, guid: 2be24f295c371d74daf31797b216f743, type: 2}
   delayInvoke: 0
   Response:
     m_PersistentCalls:
@@ -1334,6 +1337,35 @@ MonoBehaviour:
       - m_Target: {fileID: 1696746182}
         m_TargetAssemblyTypeName: Modular.Events.UIUpdate, Assembly-CSharp
         m_MethodName: UpdateUIElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1696746184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696746178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0effd7304d85694b8374a425e3d6fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7e825dfa67dd80448bbb13ec42865b29, type: 2}
+  delayInvoke: 0
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1696746182}
+        m_TargetAssemblyTypeName: Modular.Events.UIUpdate, Assembly-CSharp
+        m_MethodName: ResetText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

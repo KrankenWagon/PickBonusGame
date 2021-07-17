@@ -9,6 +9,7 @@ namespace Modular.Events {
 
     public class UIUpdate : MonoBehaviour {
         public FloatVariable value;                                         //The value used to update the text
+        public float resetValue;                                            //Value to reset the floatvariable and text to
         private Text text;                                                  //The text element of this object to be updated
 
         // Start is called before the first frame update
@@ -19,6 +20,12 @@ namespace Modular.Events {
         // This method updates the UI
         public void UpdateUIElement() {
             text.text = "$" + value.Value.ToString("0.00");
+        }
+
+        // This method resets the text and associated float variable
+        public void ResetText() {
+            value.Value = resetValue;
+            UpdateUIElement();
         }
     }
 }
