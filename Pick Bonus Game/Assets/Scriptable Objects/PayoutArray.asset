@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PayoutArray
   m_EditorClassIdentifier: 
   ListValue:
-  - 1.45
   - 0.05
   - 0
-  - 0
-  - 0.1
-  - 0.15
-  - 0
+  - 2.55
+  - 0.2
+  - 2.7
+  - 4.85
+  - 0.2
   DeveloperDescription: 

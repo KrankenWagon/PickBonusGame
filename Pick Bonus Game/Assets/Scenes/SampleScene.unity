@@ -429,7 +429,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -458,7 +458,7 @@ RectTransform:
   - {fileID: 213737791}
   - {fileID: 1778162652}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -659,6 +659,8 @@ GameObject:
   - component: {fileID: 798017627}
   - component: {fileID: 798017629}
   - component: {fileID: 798017628}
+  - component: {fileID: 798017631}
+  - component: {fileID: 798017630}
   m_Layer: 5
   m_Name: Balance Total
   m_TagString: Untagged
@@ -727,6 +729,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 798017626}
   m_CullTransparentMesh: 1
+--- !u!114 &798017630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798017626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0effd7304d85694b8374a425e3d6fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7e825dfa67dd80448bbb13ec42865b29, type: 2}
+  delayInvoke: 0
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 798017631}
+        m_TargetAssemblyTypeName: Modular.Events.UIUpdate, Assembly-CSharp
+        m_MethodName: UpdateUIElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &798017631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798017626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6840712e10c0754696231fec11cf11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: {fileID: 11400000, guid: 1260c37e8925fb540ad44e470c80e7f6, type: 2}
 --- !u!1001 &889438047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -986,7 +1030,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1138821974
 MonoBehaviour:
@@ -1187,6 +1231,8 @@ GameObject:
   - component: {fileID: 1696746179}
   - component: {fileID: 1696746181}
   - component: {fileID: 1696746180}
+  - component: {fileID: 1696746183}
+  - component: {fileID: 1696746182}
   m_Layer: 5
   m_Name: Last Win Total
   m_TagString: Untagged
@@ -1255,6 +1301,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696746178}
   m_CullTransparentMesh: 1
+--- !u!114 &1696746182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696746178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6840712e10c0754696231fec11cf11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: {fileID: 11400000, guid: 9f3e226f3c6b57e4e8f7f1a52b0ea9fa, type: 2}
+--- !u!114 &1696746183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696746178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0effd7304d85694b8374a425e3d6fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b59a6640b42e2c14297ad05e701df9a9, type: 2}
+  delayInvoke: 0
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1696746182}
+        m_TargetAssemblyTypeName: Modular.Events.UIUpdate, Assembly-CSharp
+        m_MethodName: UpdateUIElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1778162651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1354,9 @@ GameObject:
   - component: {fileID: 1778162652}
   - component: {fileID: 1778162654}
   - component: {fileID: 1778162653}
+  - component: {fileID: 1778162657}
+  - component: {fileID: 1778162656}
+  - component: {fileID: 1778162655}
   m_Layer: 5
   m_Name: Current Denomination
   m_TagString: Untagged
@@ -1336,6 +1427,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778162651}
   m_CullTransparentMesh: 1
+--- !u!114 &1778162655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778162651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0effd7304d85694b8374a425e3d6fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 9226c71bffc140442b1249f00b8f1969, type: 2}
+  delayInvoke: 0
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778162657}
+        m_TargetAssemblyTypeName: Modular.Events.DenominationManager, Assembly-CSharp
+        m_MethodName: DenominationDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1778162656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778162651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0effd7304d85694b8374a425e3d6fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b7d90dc18dd16e7479949356ab8e4916, type: 2}
+  delayInvoke: 0
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778162657}
+        m_TargetAssemblyTypeName: Modular.Events.DenominationManager, Assembly-CSharp
+        m_MethodName: DenominationUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1778162657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778162651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0caf602ec45da64290e3109d84f0828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDenomination: {fileID: 0}
 --- !u!1001 &2208217469361785371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1361,7 +1523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2208217470185354756, guid: 59fd9666b3fec3c4ba8e6fcd26e6ed7c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2208217470185354756, guid: 59fd9666b3fec3c4ba8e6fcd26e6ed7c, type: 3}
       propertyPath: m_AnchorMax.x

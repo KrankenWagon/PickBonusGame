@@ -59,7 +59,6 @@ namespace Modular.Events {
                 payoutValue = Mathf.RoundToInt(Random.Range(0, payoutValue)) * .05f;
                 payoutArray[i] = payoutValue;
                 totalLeft -= payoutValue;
-                Debug.Log(totalLeft);
             }
 
             //Add whatevers left to the second to last array index, leaving one space for the guarenteed pooper

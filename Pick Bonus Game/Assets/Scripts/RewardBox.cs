@@ -11,6 +11,7 @@ namespace Modular.Events {
         public GameEvent roundOver;                                         //Game event that triggers the end of the current round
         public BoolVariable roundActive;                                    //Is there a current active round
         public ListVariableFloat payouts;                                   //Universal list of the payouts
+        public FloatVariable winTotal;                                      //Total amount won this round
         private bool isFlipped = false;                                     //Is the reward box currently flipped over
         private ParticleSystem particles;                                   //Particle system which triggers upon flipping
         private Text text;                                                  //Text element of the reward box
@@ -27,8 +28,11 @@ namespace Modular.Events {
                 isFlipped = true;
 
                 text.text = payouts.GetValue(0).ToString();
-                if (payouts.GetValue(0) == 0)
+                winTotal.Value += payouts.GetValue(0);
+                if (payouts.GetValue(0) == 0) {
                     roundOver.Raise();
+                    winTotal.Value = 0;
+                }
 
                 payouts.RemoveAt(0);
                 particles.Play();
