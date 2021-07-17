@@ -284,8 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc60d0e3e75d99149bf7a51f766095e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roundOver: {fileID: 11400000, guid: b59a6640b42e2c14297ad05e701df9a9, type: 2}
+  roundActive: {fileID: 11400000, guid: 55be585a333ae524e885b093df7a3086, type: 2}
   payouts: {fileID: 11400000, guid: 009a688369fccd941a0f927fce3add83, type: 2}
-  isFlipped: 0
 --- !u!222 &2208217470185354759
 CanvasRenderer:
   m_ObjectHideFlags: 0

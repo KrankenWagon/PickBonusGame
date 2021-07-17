@@ -13,9 +13,9 @@ namespace Modular.Events {
 
         // This method raises the Start Round game event on mouse click
         private void OnMouseUpAsButton() {
-            if (!roundActive) {
+            if (!roundActive.Value) {
                 startRound.Raise();
-                roundActive.Value = true;
+                roundActive.SetValue(true);
             }
         }
     }

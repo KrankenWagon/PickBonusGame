@@ -8,8 +8,10 @@ using UnityEngine.UI;
 namespace Modular.Events {
 
     public class RewardBox : MonoBehaviour {
+        public GameEvent roundOver;                                         //Game event that triggers the end of the current round
+        public BoolVariable roundActive;                                    //Is there a current active round
         public ListVariableFloat payouts;                                   //Universal list of the payouts
-        private bool isFlipped = true;                                      //Is the reward box currently flipped over
+        private bool isFlipped = false;                                     //Is the reward box currently flipped over
         private ParticleSystem particles;                                   //Particle system which triggers upon flipping
         private Text text;                                                  //Text element of the reward box
 
@@ -21,9 +23,13 @@ namespace Modular.Events {
 
         //This method flips the card and reveals the reward
         private void OnMouseUpAsButton() {
-            if (!isFlipped) {
+            if (!isFlipped && roundActive.Value) {
                 isFlipped = true;
+
                 text.text = payouts.GetValue(0).ToString();
+                if (payouts.GetValue(0) == 0)
+                    roundOver.Raise();
+
                 payouts.RemoveAt(0);
                 particles.Play();
             }
