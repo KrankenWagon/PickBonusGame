@@ -12,5 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05968a984682c1a4f8e1c7e73f18eb62, type: 3}
   m_Name: Payout Array
   m_EditorClassIdentifier: 
-  ListValue: []
+  ListValue:
+  - 0.25
+  - 0.1
+  - 0.4
+  - 0.15
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0.6
   DeveloperDescription: 

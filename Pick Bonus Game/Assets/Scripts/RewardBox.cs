@@ -10,11 +10,13 @@ namespace Modular.Events {
     public class RewardBox : MonoBehaviour {
         public ListVariableFloat payouts;                                       //Universal list of the payouts
         public bool isFlipped;                                                  //Is the reward box currently flipped over
+        private ParticleSystem particles;                                       //Particle system which triggers upon flipping
         private Text text;                                                      //Text element of the reward box
 
         // Start is called before the first frame update
         void Start() {
             text = GetComponentInChildren<Text>();
+            particles = GetComponentInChildren<ParticleSystem>();
         }
 
         private void OnMouseUp() {
@@ -23,6 +25,7 @@ namespace Modular.Events {
                 isFlipped = true;
                 text.text = payouts.GetValue(0).ToString();
                 payouts.RemoveAt(0);
+                particles.Play();
             }
         }
     }
