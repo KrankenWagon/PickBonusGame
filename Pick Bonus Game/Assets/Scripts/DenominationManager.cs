@@ -15,6 +15,9 @@ namespace Modular.Events {
 
         private void Start() {
             text = GetComponent<Text>();
+
+            currentDenomination.Value = validDenominations[index];
+            text.text = "$" + currentDenomination.Value.ToString("0.00");
         }
 
         // This method increases the denomination

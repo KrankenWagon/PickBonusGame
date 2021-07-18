@@ -18,7 +18,6 @@ namespace Modular.Events {
         private void OnMouseUpAsButton() {
             if (!roundActive.Value) {
                 startRound.Raise();
-                roundActive.SetValue(true);
             }
         }
     }
