@@ -33,9 +33,15 @@ namespace Modular.Events {
                 winTotal.Value += payouts.GetValue(0);
                 flipped.Raise();
 
-                payouts.RemoveAt(0);
                 particles.Play();
+
+                StartCoroutine(DelayForEndofFrame());
             }
+        }
+
+        public void NextRound() {
+            isFlipped = false;
+            text.text = "?";
         }
 
         // This method delays raising the round over event until the end of the frame
@@ -45,6 +51,8 @@ namespace Modular.Events {
             if (payouts.GetValue(0) == 0) {
                 roundOver.Raise();
             }
+
+            payouts.RemoveAt(0);
         }
     }
 }
