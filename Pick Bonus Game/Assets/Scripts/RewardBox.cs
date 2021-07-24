@@ -28,7 +28,7 @@ namespace Modular.Events {
             if (!isFlipped && roundActive.Value) {
                 isFlipped = true;
 
-                text.text = payouts.GetValue(0).ToString();
+                text.text = payouts.GetValue(0).ToString("0.00");
 
                 winTotal.Value += payouts.GetValue(0);
                 flipped.Raise();

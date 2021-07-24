@@ -13,7 +13,8 @@ namespace Modular.Events {
         private float[] validDenominations = { .25f, .5f, 1f, 5f };         //Array of the valid denominations
         private int index = 0;                                              //Index of current denomination
 
-        private void Start() {
+        // Start is called before the first frame update
+        void Start() {
             text = GetComponent<Text>();
 
             currentDenomination.Value = validDenominations[index];

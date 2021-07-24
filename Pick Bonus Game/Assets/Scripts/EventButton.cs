@@ -8,9 +8,12 @@ namespace Modular.Events {
 
     public class EventButton : MonoBehaviour {
         public GameEvent trigger;                                           //Game event to be triggered by this button
+        public BoolVariable roundActive;                                    //Is the round active
+        public bool activeDuringRound;                                      //Is the button active during the round
 
         private void OnMouseUpAsButton() {
-            trigger.Raise();
+            if (!roundActive.Value || activeDuringRound)
+                trigger.Raise();
         }
     }
 }
