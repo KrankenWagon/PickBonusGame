@@ -77,6 +77,15 @@ namespace Modular.Events {
                 payoutArray[i] = payoutArray[rand];
                 payoutArray[rand] = temp;
             }
+
+            if ((multiplier != 0) && (multiplier < 10) && (payoutArray[0] == 0)) {
+                rand = payoutArray.Length - 1;
+                while (payoutArray[0] == 0) {
+                    payoutArray[0] = payoutArray[rand];
+                    payoutArray[rand] = 0;
+                    rand--;
+                }
+            }
         }
     }
 }
